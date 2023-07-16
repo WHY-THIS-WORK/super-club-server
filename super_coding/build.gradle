@@ -33,3 +33,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+// build 시 jar,plain.jap 2개가 생성으로 터미널 빌드가 안됩
+// 아래 코드 입력해 줌으로 jar파일만 생성되게 해줌
+tasks.named("jar"){
+	enabled = false
+}
